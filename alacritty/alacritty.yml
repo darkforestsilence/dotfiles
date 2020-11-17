@@ -1,0 +1,13 @@
+font:
+  normal:
+    family: Nimbus Mono PS
+  bold:
+    family: Nimbus Mono PS
+  italic:
+    family: Nimbus Mono PS 
+
+  size: 10.0
+
+draw_bold_text_with_bright_colors: false
+
+background_opacity: 0.8
