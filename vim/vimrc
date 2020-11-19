@@ -13,7 +13,7 @@ call vundle#end()
 
 filetype plugin indent on
 
-let g:syntastic_cpp_compiler_options = '-std=c++17 -Wall -Werror -Wpedantic'
+let g:syntastic_cpp_compiler_options = '-std=c++2a -Wall -Werror -Wpedantic'
 let g:syntastic_cpp_check_header = 1
 
 " Jump to last position when opening a file

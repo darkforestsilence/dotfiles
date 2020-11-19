@@ -19,3 +19,27 @@ alias nix-shell='nix-shell --pure -p'
 
 # force bash to check the sudo command for aliases
 alias sudo='sudo '
+
+git()
+{
+	if [ $# -gt 0 ] ; then
+		case "$1" in
+			"yeet")
+				gcommand="push"
+				;;
+			"Yeet")
+				gcommand="push --force-with-lease"
+				;;
+			"YEET")
+				gcommand="push --force"
+				;;
+			*)
+				gcommand="$1"
+				;;
+		esac
+		shift
+		command git "$gcommand" "$@"
+	else
+		command git "$@"
+	fi
+}
