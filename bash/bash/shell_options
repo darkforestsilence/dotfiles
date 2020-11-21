@@ -1,0 +1,11 @@
+# vi:syntax=bash
+
+shell_options=(histappend cmdhist dirspell checkwinsize checkhash globstar)
+for opt in ${shell_options}; do
+	shopt -s $opt
+done
+
+eval "$(lesspipe)"
+
+EDITOR=vim
+HISTCONTROL=ignoreboth

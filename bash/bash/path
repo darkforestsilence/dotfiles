@@ -1,0 +1,2 @@
+# vi:syntax=bash
+export PATH=$HOME/bin:$PATH
