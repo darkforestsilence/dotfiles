@@ -26,5 +26,6 @@ rm -f $HOME/.tmux
 ln -sv $SCIRPTPATH/tmux/tmux.conf $HOME/.tmux.conf
 
 # alacritty setup
+mkdir -pv ~/.config
 rm -rf .config/alacritty
 ln -sv $SCRIPTPATH/alacritty $HOME/.config/alacritty
