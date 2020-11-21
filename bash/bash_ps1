@@ -1,0 +1,12 @@
+# vi:syntax=bash
+UserName="\u"
+HostName="\h"
+Directory="\w"
+
+#colors
+Green="\[\033[1;32m\]"
+Blue="\[\033[1;34m\]"
+
+EndColor="\[\033[0m\]"
+
+export PS1="$Green$UserName@$HostName:$Blue$Directory$EndColor\$ "
