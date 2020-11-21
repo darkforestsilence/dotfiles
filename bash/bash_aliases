@@ -21,11 +21,15 @@ alias sudo='sudo '
 
 function apt()
 {
-	case "$1" in
-		"search") gcommand="apt";;
-		*) gcommand="sudo apt";;
-	esac
-	command "$gcommand" "$@"
+	if [[ $# -eq 0 ]] ;
+	then
+		command apt
+	else
+		case "$1" in
+			"search") command apt "$@";;
+			*) command sudo apt "$@";;
+		esac
+	fi
 }
 
 git(){
