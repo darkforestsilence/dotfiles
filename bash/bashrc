@@ -10,5 +10,5 @@ for file in $HOME/.bash/*; do source $file; done
 
 # Setup Colors and PS1
 eval "$(dircolors -b)"
-CC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 PS1="$Green$UserName@$HostName:$Blue$Directory$EndColour\$ "
