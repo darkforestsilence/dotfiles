@@ -38,7 +38,7 @@ function git(){
 		"yeet") gcommand="push";;
 		"Yeet")	gcommand="push --force-with-lease";;
 		"YEET")	gcommand="push --force";;
-		"yoink") gcommand="pull"
+		"yoink") gcommand="pull";;
 		*)	gcommand="${1:-help}";;
 	esac
 	shift
