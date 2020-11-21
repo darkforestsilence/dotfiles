@@ -23,7 +23,7 @@ rm -f $HOME/.inputrc
 ln -sv $SCRIPTPATH/input/inputrc $HOME/.inputrc
 
 # tmux setup
-rm -f $HOME/.tmux
+rm -f $HOME/.tmux.conf
 ln -sv $SCIRPTPATH/tmux/tmux.conf $HOME/.tmux.conf
 
 # alacritty setup
