@@ -1,5 +1,7 @@
 cd $HOME
 
+sudo apt install git vim gcc tmux
+
 SCRIPT=$(readline -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 
@@ -20,5 +22,9 @@ rm -f $HOME/.inputrc
 ln -sv $SCRIPTPATH/input/inputrc $HOME/.inputrc
 
 # tmux setup
-rm $HOME/.tmux
+rm -f $HOME/.tmux
 ln -sv $SCIRPTPATH/tmux/tmux.conf $HOME/.tmux.conf
+
+# alacritty setup
+rm -rf .config/alacritty
+ln -sv $SCRIPTPATH/alacritty $HOME/.config/alacritty
