@@ -13,12 +13,20 @@ alias l='ls -CF'
 alias sl='ls'
 
 alias atp='apt'
-alias apt='sudo apt'
 
 alias nix-shell='nix-shell --pure -p'
 
 # force bash to check the sudo command for aliases
 alias sudo='sudo '
+
+function apt()
+{
+	case "$1" in
+		"search") gcommand="apt";;
+		*) gcommand="sudo apt";;
+	esac
+	command "$gcommand" "$@"
+}
 
 git(){
 	case "$1" in
