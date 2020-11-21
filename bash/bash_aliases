@@ -33,7 +33,7 @@ function apt()
 	fi
 }
 
-git(){
+function git(){
 	case "$1" in
 		"yeet") gcommand="push";;
 		"Yeet")	gcommand="push --force-with-lease";;
