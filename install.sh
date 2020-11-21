@@ -2,11 +2,12 @@ cd $HOME
 
 sudo apt install git vim gcc tmux
 
-SCRIPT=$(readline -f "$0")
+SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 
 # bash setup
 rm -f $HOME/.bashrc
+rm -rf $HOME/.bash
 ln -sv $SCRIPTPATH/bash/bashrc $HOME/.bashrc
 ln -sv $SCRIPTPATH/bash/bash $HOME/.bash
 
