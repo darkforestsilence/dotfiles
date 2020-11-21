@@ -1,12 +1,25 @@
 # vi:syntax=bash
+# This file contains the definitions to build a ps1 statement from the basic parts
+# and makes it easier to customize the colors
 UserName="\u"
 HostName="\h"
 Directory="\w"
 
-#colors
-Green="\[\033[1;32m\]"
-Blue="\[\033[1;34m\]"
+#colour ansi fragments 
+Colour="\[\033["
+ColourEnd="m\]"
+EndColour="$Colour"0"$ColourEnd"
 
-EndColor="\[\033[0m\]"
+Light="0"
+Dark="1"
 
-export PS1="$Green$UserName@$HostName:$Blue$Directory$EndColor\$ "
+function makeColour(){
+	local __result=$1
+	local colour="$Colour$Dark;$2$ColourEnd"
+	eval $__result="'$colour'"
+}
+
+#Colours
+makeColour Green 32
+makeColour Blue 34
+

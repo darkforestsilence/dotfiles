@@ -38,6 +38,6 @@ elif [ -f /etc/bash_completion ]; then
 fi
 
 source $HOME/.bash_ps1
-export PS1
+export PS1="$Green$UserName@$HostName:$Blue$Directory$EndColour\$ "
 
 EDITOR=vim
