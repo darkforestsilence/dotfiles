@@ -43,5 +43,5 @@ function git(){
 		*)	gcommand="${1:-help}";;
 	esac
 	shift
-	command git "$gcommand" "$@"
+	command git $gcommand "$@"
 }
