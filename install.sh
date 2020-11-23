@@ -1,4 +1,4 @@
-sudo apt install git vim gcc tmux
+sudo apt install vim gcc tmux alacritty
 
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
@@ -28,3 +28,9 @@ ln -s $SCIRPTPATH/tmux/tmux.conf $HOME/.tmux.conf
 mkdir -p $HOME/.config
 rm -rf $HOME/.config/alacritty
 ln -s $SCRIPTPATH/alacritty $HOME/.config/alacritty
+
+# everything is set up so reload the configuration files
+# and create some directories for libraries and c/c++
+mkdir -p $HOME/{bin,lib,include}
+bind -f $HOME/.inputrc
+source ~/.bashrc
