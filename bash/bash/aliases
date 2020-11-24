@@ -27,7 +27,7 @@ function apt()
 		command apt
 	else
 		case "$1" in
-			"search") command apt "$@";;
+			"search"|"show") command apt "$@";;
 			*) command sudo apt "$@";;
 		esac
 	fi

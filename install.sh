@@ -34,3 +34,5 @@ ln -s $SCRIPTPATH/alacritty $HOME/.config/alacritty
 mkdir -p $HOME/{bin,lib,include}
 bind -f $HOME/.inputrc
 source ~/.bashrc
+
+echo "nyah" > $HOME/.girl
