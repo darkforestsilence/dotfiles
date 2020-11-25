@@ -2,6 +2,9 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
+set path+=**
+
+set wildmenu
 
 " Load Plugins
 call vundle#begin()
@@ -9,7 +12,6 @@ call vundle#begin()
 "plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'pseewald/vim-anyfold'
 
 " colorschemes
 Plugin 'tomasr/molokai'
@@ -28,6 +30,3 @@ if has("autocmd")
 	au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 	   \| exe "normal! g'\"" | endif
 endif
-
-autocmd Filetype * AnyFoldActivate
-set foldlevel=0

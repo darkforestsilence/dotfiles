@@ -32,3 +32,9 @@ colors:
     magenta: '#AE81FF'
     cyan: '#66D9EF'
     white: '#F8F8F2'
+
+shell:
+  program: /usr/bin/tmux
+key_bindings:
+  - { key: F5, chars: "\x02\"" }
+  - { key: F6, chars: "\x02%" }
