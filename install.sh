@@ -1,4 +1,18 @@
-sudo apt install vim gcc tmux alacritty
+if [[ -f /etc/os-release ]]; then
+	source /etc/os-release
+	case $ID_LIKE in
+		*ubuntu*|*debian*)
+			sudo apt install vim gcc tmux alacritty
+			;;
+		*)
+			echo "Unknown os variant"
+			;;
+	esac
+else
+	echo "Could not detect OS type"
+fi
+
+
 
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
@@ -34,5 +48,7 @@ ln -s $SCRIPTPATH/alacritty $HOME/.config/alacritty
 mkdir -p $HOME/{bin,lib,include}
 bind -f $HOME/.inputrc
 source ~/.bashrc
+
+sh -c "$(curl -sSL sh.rustup.rs)"
 
 echo "nyah" > $HOME/.girl

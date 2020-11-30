@@ -1,5 +1,5 @@
 # vi:syntax=bash
-export PATH=$HOME/bin:$PATH
-export LIBRARY_PATH=$HOME/lib:$LIBRARY_PATH
-export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
-export CPATH=$HOME/include:$CPATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:$PATH
+export LIBRARY_PATH=$HOME/lib
+export LD_LIBRARY_PATH=$HOME/lib
+export CPATH=$HOME/include

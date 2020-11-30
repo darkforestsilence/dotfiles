@@ -17,8 +17,16 @@ alias atp='apt'
 
 alias nix-shell='nix-shell --pure -p'
 
+alias bat='batcat'
+
 # force bash to check the sudo command for aliases
 alias sudo='sudo '
+
+function mk..dir (){
+	cd ../
+	mkdir -pv $1
+	cd $1
+}
 
 function apt()
 {
