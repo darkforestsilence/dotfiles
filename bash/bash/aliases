@@ -41,6 +41,17 @@ function apt()
 	fi
 }
 
+function cdvim(){
+	if [[ $# -eq 1 ]] ;
+	then
+		cd $(dirname $1)
+		vim $(basename $1)
+	else
+		echo "Cannot open file because no"
+	fi
+}
+		
+
 function git(){
 	case "$1" in
 		"yeet") gcommand="push";;

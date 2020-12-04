@@ -1,16 +1,16 @@
-if [[ -f /etc/os-release ]]; then
-	source /etc/os-release
-	case $ID_LIKE in
-		*ubuntu*|*debian*)
-			sudo apt install vim gcc tmux alacritty
-			;;
-		*)
-			echo "Unknown os variant"
-			;;
-	esac
-else
-	echo "Could not detect OS type"
-fi
+#if [[ -f /etc/os-release ]]; then
+#	source /etc/os-release
+#	case $ID_LIKE in
+#		*ubuntu*|*debian*)
+#			sudo apt install vim gcc tmux alacritty
+#			;;
+#		*)
+#			echo "Unknown os variant"
+#			;;
+#	esac
+#else
+#	echo "Could not detect OS type"
+#fi
 
 
 
