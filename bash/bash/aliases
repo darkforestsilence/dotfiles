@@ -17,7 +17,8 @@ alias atp='apt'
 
 alias nix-shell='nix-shell --pure -p'
 
-alias bat='batcat'
+# maybe fun aliases
+alias owo='man'
 
 # force bash to check the sudo command for aliases
 alias sudo='sudo '
@@ -26,19 +27,6 @@ function mk..dir (){
 	cd ../
 	mkdir -pv $1
 	cd $1
-}
-
-function apt()
-{
-	if [[ $# -eq 0 ]] ;
-	then
-		command apt
-	else
-		case "$1" in
-			"search"|"show") command apt "$@";;
-			*) command sudo apt "$@";;
-		esac
-	fi
 }
 
 function git(){
