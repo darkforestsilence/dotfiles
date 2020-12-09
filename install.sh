@@ -1,18 +1,25 @@
-#if [[ -f /etc/os-release ]]; then
-#	source /etc/os-release
-#	case $ID_LIKE in
-#		*ubuntu*|*debian*)
-#			sudo apt install vim gcc tmux alacritty
-#			;;
-#		*)
-#			echo "Unknown os variant"
-#			;;
-#	esac
-#else
-#	echo "Could not detect OS type"
-#fi
+if sudo echo "Installing dotfiles, please enter credentials"; then
+	if [[ -f /etc/os-release ]]; then
+		source /etc/os-release
+		case $ID_LIKE in
+			*ubuntu*|*debian*)
+				sudo apt install vim gcc tmux 
+				;;
+			*fedora*)
+				sudo dnf install vim gcc tmux 
+				;;
+			*)
+				echo "Unknown os variant"
+				;;
+		esac
+	else
+		echo "Could not detect OS type"
+	fi
 
 
+else
+	echo "Installing dotfiles without root"
+fi
 
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
@@ -50,5 +57,6 @@ bind -f $HOME/.inputrc
 source ~/.bashrc
 
 sh -c "$(curl -sSL sh.rustup.rs)"
+source $HOME/.cargo/env
 
 echo "nyah" > $HOME/.girl
