@@ -43,7 +43,7 @@ ln -s $SCRIPTPATH/input/inputrc $HOME/.inputrc
 
 # tmux setup
 rm -f $HOME/.tmux.conf
-ln -s $SCIRPTPATH/tmux/tmux.conf $HOME/.tmux.conf
+ln -s $SCRIPTPATH/tmux/tmux.conf $HOME/.tmux.conf
 
 # alacritty setup
 mkdir -p $HOME/.config
