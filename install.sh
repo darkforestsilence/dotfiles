@@ -1,4 +1,5 @@
-if sudo echo "Installing dotfiles, please enter credentials"; then
+echo "Installing dotfiles, please enter credentials"
+if sudo echo ""; then
 	if [[ -f /etc/os-release ]]; then
 		source /etc/os-release
 		case $ID_LIKE in
