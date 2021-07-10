@@ -29,6 +29,21 @@ function mk..dir (){
 	cd $1
 }
 
+function makescript (){
+	touch $1
+	chmod +x $1
+	vim $1
+}
+
+function gitvim () {
+	vim $1
+	git add $1
+	echo "Commit Message: "
+	read message
+	git commit -m "$message"
+}
+
+
 function cdvim(){
 	if [[ $# -eq 1 ]] ;
 	then
