@@ -57,6 +57,8 @@ mkdir -p $HOME/{bin,lib,include}
 bind -f $HOME/.inputrc
 source ~/.bashrc
 
+ln -s $SCRIPTPATH/scripts/* $HOME/bin
+
 sh -c "$(curl -sSL sh.rustup.rs)"
 source $HOME/.cargo/env
 
