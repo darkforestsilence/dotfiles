@@ -5,6 +5,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 set path+=**
 
+set expandtab
+
 set wildmenu
 
 " Load Plugins
@@ -13,6 +15,8 @@ call vundle#begin()
 "plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'rust-lang/rust.vim'
+Plugin 'raku/vim-raku'
 
 " colorschemes
 Plugin 'tomasr/molokai'
