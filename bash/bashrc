@@ -15,4 +15,21 @@ GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 source "$HOME/.cargo/env"
 
-export PS1="\n\[\033[38;5;5m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;48m\]\d\[$(tput sgr0)\] \[$(tput bold)\]\t\[$(tput sgr0)\]\n\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;128m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;6m\]\$?\[$(tput sgr0)\]\n\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;44m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;200m\]\h\[$(tput sgr0)\]:\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;111m\]\w\[$(tput sgr0)\] \\$ \[$(tput sgr0)\]"
+do_ps1 () {
+    echo "\n\
+\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;128m\]> \
+\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;48m\]\d\
+\[$(tput sgr0)\] \[$(tput bold)\]\t\
+\n\
+\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;128m\]> \
+\[$(tput sgr0)\]\[\033[38;5;6m\]$?\
+\n\
+\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;44m\]\u\
+\[$(tput sgr0)\]@\[$(tput bold)\]\[\033[38;5;200m\]\h\
+\[$(tput sgr0)\]:\[$(tput bold)\]\[\033[38;5;111m\]\w\
+\[$(tput sgr0)\] \\$ "
+}
+
+
+      
+export PS1=$(do_ps1)
